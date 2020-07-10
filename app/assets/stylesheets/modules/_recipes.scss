@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+.body {
+  margin: 0 ;
+  padding: 0;
+}
+.header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  &__logo img {
+    margin-left: 40px;
+    width: 110px;
+    height: 100px;
+  }
+  &__login {
+    display: flex;
+    margin: 20px 70px 30px 0;
+    }
+    .login-left,.login-right,.login-center {
+      color: #fff;
+    }
+    & a {
+      text-decoration: none;
+      margin: 30px 30px 40px 30px;
+    }
+    & a:hover {
+      text-decoration: none;
+    }
+}
+.main {
+  &-top {
+    position: fixed;
+    height: 60px;
+    background-color: #0A966A;
+    color: #fff;
+    font-size: 25px;
+    p {
+      margin: 10px 30px;
+    }
+  }
+  width: 100%;
+  // background-color: #F5F2EB;
+  background-color: #fff;
+  .content {
+    height: 430px;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow:
+    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
+    img {
+      height: 200px;
+      width: 100%;
+      text-align: center;
+    }
+    &__bottom {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #333;
+        &-recipe-name {
+          padding-top: 10px;
+        }
+      }
+      .content__bottom__recipe-like {
+        color: #fff;
+      }
+      .user_name,.recipe_name {
+        display: flex;
+      }
+      .content__bottom-date {
+        font-size: 14px;
+      }
+      .btn--icon {
+        color: #333;
+        font-size: 30px;
+        margin: 10px 0;
+        cursor: pointer;
+      }
+    }
+  }
+.footer {
+  height: 60px;
+  background-color: #333;
+  
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 25px;
+  }
+}
+
