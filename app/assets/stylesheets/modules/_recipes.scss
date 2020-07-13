@@ -21,33 +21,33 @@
   }
   &__login {
     display: flex;
-    margin: 20px 70px 30px 0;
+    margin: 20px 70px 0 0;
     }
     .login-left,.login-right,.login-center {
-      color: #fff;
+      color: #333;
+      background-color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
     }
     & a {
       text-decoration: none;
-      margin: 30px 30px 40px 30px;
+      margin: 10px 20px 0 20px;
+
     }
     & a:hover {
       text-decoration: none;
     }
 }
 .main {
+  background-color: #fff;
   &-top {
     position: fixed;
-    height: 60px;
-    background-color: #0A966A;
-    color: #fff;
-    font-size: 25px;
-    p {
-      margin: 10px 30px;
-    }
+    text-align: center;
+    padding-top: 20px;
+    color: #000;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
   }
-  width: 100%;
-  // background-color: #F5F2EB;
-  background-color: #fff;
   .content {
     height: 430px;
     background-color: #fff;
