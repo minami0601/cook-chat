@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'recipes#index'
+  devise_for :users
+  root to: 'home#index'
+  resources :recipes, only: :index
+  resources :users
 end
