@@ -5,95 +5,25 @@
         %p Recipe list
   .container
     .row.py-5
-      .col-sm-12.col-xl-4.col-md-6
-        .content
-          = link_to "#" do
-            = image_tag "karaage.jpg"
-          .content__bottom
+      - @recipes.each do |recipe|
+        .col-sm-12.col-xl-4.col-md-6
+          .content 
+            = link_to recipe_path(recipe), class: "top_img" do
+              = attachment_image_tag recipe, :image
             .content__bottom
-              .content__bottom__recipe-like
-                %i
-                  = icon('far', 'heart', class: "btn--icon")
+              .content__bottom
+                .content__bottom__recipe-like
+                  -if current_user.already_liked?(recipe)
+                    = link_to recipe_likes_path(recipe), method: :delete do
+                      = icon('fas', 'heart', class: "btn--icon-top")
+                  -else
+                    = link_to recipe_likes_path(recipe), method: :post do 
+                      = icon('far', 'heart', class: "btn--icon")
+                .count
+                  = recipe.likes.count
+            = link_to user_path(recipe.user.id), class: "bottom_img"  do
+              = attachment_image_tag recipe.user, :profile_image, fallback: "no_image.png"
               .user_name
-                .user_name-top
-                  %p ユーザー名：
-                .content__bottom__left-user-name
-                  = link_to "#" do
-                    %p Minami
-              .recipe_name
-                .recipe_name-top
-                  %p 料理名：
-                .content__bottom__left-recipe-name
-                  = link_to "#" do
-                    %p 唐揚げ
-              .content__bottom-date
-                %p 2020-06-01 00:00更新
-      .col-sm-12.col-xl-4.col-md-6
-        .content
-          = link_to "#" do
-            = image_tag "karaage.jpg"
-          .content__bottom
-            .content__bottom
-              .content__bottom__recipe-like
-                %i
-                  = icon('far', 'heart', class: "btn--icon")
-              .user_name
-                .user_name-top
-                  %p ユーザー名：
-                .content__bottom__left-user-name
-                  = link_to "#" do
-                    %p Minami
-              .recipe_name
-                .recipe_name-top
-                  %p 料理名：
-                .content__bottom__left-recipe-name
-                  = link_to "#" do
-                    %p 唐揚げ
-              .content__bottom-date
-                %p 2020-06-01 00:00更新
-      .col-sm-12.col-xl-4.col-md-6
-        .content
-          = link_to "#" do
-            = image_tag "karaage.jpg"
-          .content__bottom
-            .content__bottom
-              .content__bottom__recipe-like
-                %i
-                  = icon('far', 'heart', class: "btn--icon")
-              .user_name
-                .user_name-top
-                  %p ユーザー名：
-                .content__bottom__left-user-name
-                  = link_to "#" do
-                    %p Minami
-              .recipe_name
-                .recipe_name-top
-                  %p 料理名：
-                .content__bottom__left-recipe-name
-                  = link_to "#" do
-                    %p 唐揚げ
-              .content__bottom-date
-                %p 2020-06-01 00:00更新
-      .col-sm-12.col-xl-4.col-md-6
-        .content
-          = link_to "#" do
-            = image_tag "karaage.jpg"
-          .content__bottom
-            .content__bottom
-              .content__bottom__recipe-like
-                %i
-                  = icon('far', 'heart', class: "btn--icon")
-              .user_name
-                .user_name-top
-                  %p ユーザー名：
-                .content__bottom__left-user-name
-                  = link_to "#" do
-                    %p Minami
-              .recipe_name
-                .recipe_name-top
-                  %p 料理名：
-                .content__bottom__left-recipe-name
-                  = link_to "#" do
-                    %p 唐揚げ
-              .content__bottom-date
-                %p 2020-06-01 00:00更新
+                = recipe.user.user_name 
+            .content__bottom-date
+              = recipe.updated_at.strftime("%Y-%m-%d %H:%M") 

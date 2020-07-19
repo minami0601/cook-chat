@@ -11,18 +11,20 @@
   %body.body
     %header.header#header
       .header__logo
-        = link_to "/recipes" do
+        = link_to "/" do
           = image_tag "cook-chat.png"
       .header__login
         -if user_signed_in?
-          = link_to destroy_user_session_path, method: :delete, class: "header_a" do
-            %p.login-left ログアウト
-          = link_to new_user_registration_path, class: "header__a"  do
+          = link_to new_recipe_path, class: "header__a"  do
             %p.login-center 新規投稿
           = link_to recipes_path, class: "header__a"  do
             %p.login-right レシピ一覧
           = link_to users_path, class: "header__a"  do
             %p.login-right ユーザーリスト 
+          = link_to user_path(current_user), class: "header__a"  do
+            %p.login-right マイページへ 
+          = link_to destroy_user_session_path, method: :delete, class: "header_a" do
+            %p.login-left ログアウト
         -else
           = link_to new_user_session_path, class: "header__a"  do
             %p.login-left ログイン
