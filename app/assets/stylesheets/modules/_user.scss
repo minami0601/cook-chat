@@ -1,0 +1,110 @@
+.user {
+  h2 {
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+  }
+  .content {
+    display: flex;
+    padding-left: 50px;
+  }
+  .content__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 50px;
+  }
+  .content img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  .blok {
+    padding: 20px;
+  }
+  .blok_edit {
+    text-align: right;
+  }
+  .blok_edit a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+  .content_main {
+    height: 480px;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow:
+    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
+    .top_img img{
+      height: 58%;
+      width: 100%;
+      text-align: center;
+    }
+    .bottom_img img {
+      width: 60px;
+      height: 60px;
+    }
+    .bottom_img {
+      display: flex;
+    }
+    .bottom_img a {
+      text-decoration: none;
+      color: #333333;
+    }
+    
+    .user_name {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .user_name:hover {
+      text-decoration: none;
+      color: #333333;
+    }
+    .content__bottom {
+      padding: 10px;
+      font-size: 16px;
+      color: #333;
+        &-recipe-name {
+          padding-top: 10px;
+        }
+      }
+      .content__bottom__recipe-like {
+        color: #fff;
+      }
+      .user_name,.recipe_name {
+        display: flex;
+      }
+      .content__bottom-date {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .btn--icon {
+        color: #333;
+        font-size: 30px;
+        margin: 10px 0;
+        cursor: pointer;
+      }
+      .content__bottom-delete a {
+        display: inline-block;
+        padding: 5px 15px;
+        padding-bottom: 0;
+        background-color: #09BD6D;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-align: right;
+        height: 35px;
+      }
+    }
+}

@@ -1,0 +1,39 @@
+.show 
+  %section.recipe_show
+    .container
+      .row
+        .col-12
+          %h2 Recipe
+        .col-12.content
+          .content
+            = attachment_image_tag @recipe, :image
+            .title
+              = @recipe.title
+            .body
+              作り方
+            .body_recipe
+              = simple_format @recipe.body
+            .bottom
+              .bottom_name
+                = link_to user_path(@recipe.user) do 
+                  = @recipe.user.user_name
+                  さんのページへ
+              .button
+                -if @recipe.user.id == current_user.id
+                  = link_to edit_recipe_path(@recipe) do
+                    編集
+            .line
+            .comment
+              -if current_user
+                = form_with model: [@recipe, @comment], local: true do |form|
+                  = form.text_area :text, placeholder: "コメントする", rows: "2", class: "input"
+                  = form.submit "SEND", class: "submit"
+              -else
+                %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+            .comments
+              %h4 ＜コメント一覧＞
+              -if @comments
+                - @comments.each do |comment|
+                  %p
+                    = link_to comment.user.user_name, "/users/#{comment.user_id}"
+                    = comment.text

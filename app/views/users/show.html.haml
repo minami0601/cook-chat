@@ -1,2 +1,47 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.haml
+%section.user
+  .container
+    .row
+      .col-12
+        %h2 PROFILE
+      .col-12.content.px-5
+        .content__img
+          = attachment_image_tag @user, :profile_image, fallback: "no_image.png"
+        .content__box
+          %div.blok
+            名前：
+            = @user.user_name
+
+          %div.blok
+            -if @user.id == current_user.id
+              メールアドレス：
+              = @user.email
+
+          %div.blok
+            プロフィール：
+            = @user.profile
+
+          %div.blok_edit
+            -if @user.id == current_user.id
+              =link_to edit_user_path(@user), class: "edit_button" do
+                編集
+  .container
+    .row.py-5
+      - @user.recipes.each do |recipe|
+        .col-sm-12.col-xl-4.col-md-6
+          .content_main 
+            = link_to recipe_path(recipe), class: "top_img" do
+              = attachment_image_tag recipe, :image
+            .content__bottom
+              .content__bottom
+                .content__bottom__recipe-like
+                  %i
+                    = icon('far', 'heart', class: "btn--icon")
+                = link_to user_path(recipe.user.id), class: "bottom_img"  do
+                  = attachment_image_tag recipe.user, :profile_image, fallback: "no_image.png"
+                  .user_name
+                    = recipe.user.user_name 
+                .content__bottom-date
+                  = recipe.updated_at.strftime("%Y-%m-%d %H:%M") 
+                .content__bottom-delete
+                  =link_to recipe_path(recipe), method: :delete, data: {confirm: "削除しますか？"} do
+                    %p 削除

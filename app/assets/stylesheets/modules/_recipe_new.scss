@@ -1,0 +1,41 @@
+.recipe_new {
+  height: 100vh;
+  .row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  h2 {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+  }
+  .content {
+    margin-left: 30px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 15px 0;
+  }
+  .area_body {
+    height: 200px;
+    padding-left: 10px;
+  }
+  .input {
+    padding-left: 10px;
+    height: 40px;
+  }
+  .submit_box {
+    margin: 20px 0;
+    padding: 7px 30px;
+    background-color: #09BD6D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+}
