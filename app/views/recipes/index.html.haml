@@ -14,7 +14,7 @@
               .content__bottom
                 .content__bottom__recipe-like
                   -if current_user.already_liked?(recipe)
-                    = link_to recipe_likes_path(recipe), method: :delete do
+                    = link_to recipe_like_path(recipe.likes, recipe_id: recipe.id), method: :delete do
                       = icon('fas', 'heart', class: "btn--icon-top")
                   -else
                     = link_to recipe_likes_path(recipe), method: :post do 
