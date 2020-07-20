@@ -83,3 +83,5 @@ production:
   database: cook_chat_production
   username: cook_chat
   password: <%= ENV['COOK_CHAT_DATABASE_PASSWORD'] %>
+  encoding: unicode
+  pool: 5
