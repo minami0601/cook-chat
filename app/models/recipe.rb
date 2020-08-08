@@ -4,6 +4,8 @@ class Recipe < ApplicationRecord
   has_many :comments
   has_many :likes, dependent: :destroy
 
+  mount_uploader :image_id, ImageUploader
+
   with_options presence: true do
     validates :title
     validates :body
