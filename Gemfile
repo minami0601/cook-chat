@@ -74,3 +74,4 @@ end
 gem 'fog-aws'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'dotenv-rails'
