@@ -6,6 +6,8 @@ class Recipe < ApplicationRecord
 
   # mount_uploader :image_id, ImageUploader
 
+  mount_uploader :image_id, ImageUploader
+
   with_options presence: true do
     validates :title
     validates :body
