@@ -3,12 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  attachment :profile_image
+  # attachment :profile_image
   has_many :recipes, dependent: :destroy
   has_many :comments
   has_many :likes, dependent: :destroy
 
-  # mount_uploader :profile_image_id, ImageUploader
+  mount_uploader :profile_image, ImageUploader
 
   def already_liked?(recipe)
     self.likes.exists?(recipe_id: recipe.id)

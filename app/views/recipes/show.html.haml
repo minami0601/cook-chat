@@ -6,7 +6,7 @@
           %h2 Recipe
         .col-12.content
           .content
-            = attachment_image_tag @recipe, :image
+            = @recipe.image
             .title
               = @recipe.title
             .body

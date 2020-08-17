@@ -13,7 +13,7 @@
             = f.text_area :body, class: "area_body"
           .field
             = f.label :写真, class: "label"
-            = f.attachment_field :image, class: "input_image"
+            = f.file_field :image, class: "input_image"
 
           = f.submit value: "更新", class: "submit_box" 
 

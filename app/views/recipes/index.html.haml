@@ -9,7 +9,7 @@
         .col-sm-12.col-xl-4.col-md-6
           .content 
             = link_to recipe_path(recipe), class: "top_img" do
-              = attachment_image_tag recipe, :image
+              = image_tag recipe.image.url
             .content__bottom
               .content__bottom
                 .content__bottom__recipe-like
@@ -22,7 +22,7 @@
                 .count
                   = recipe.likes.count
             = link_to user_path(recipe.user.id), class: "bottom_img"  do
-              = attachment_image_tag recipe.user, :profile_image, fallback: "no_image.png"
+              = image_tag recipe.user.profile_image.url
               .user_name
                 = recipe.user.user_name 
             .content__bottom-date

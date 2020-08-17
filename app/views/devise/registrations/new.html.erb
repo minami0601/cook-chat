@@ -15,6 +15,11 @@
       </div>
 
       <div class="field">
+        <%= f.label :profile_image %><br />
+        <%= f.file_field :profile_image, autofocus: true, autocomplete: "profile_image", :placeholder => "profile_image", class: "form_box"  %>
+      </div>
+
+      <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>

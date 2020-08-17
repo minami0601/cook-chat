@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_101625) do
     t.integer "user_id"
     t.string "title"
     t.text "body"
-    t.string "image_id"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_101625) do
     t.datetime "remember_created_at"
     t.string "user_name", null: false
     t.text "profile"
-    t.string "profile_image_id"
+    t.string "profile_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
