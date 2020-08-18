@@ -25,7 +25,6 @@ Things you may want to cover:
 
 ![cookchat top](https://user-images.githubusercontent.com/65294836/90475500-84d7c800-e162-11ea-9d17-134e27c21295.jpg)
 
+![cookchat top](https://user-images.githubusercontent.com/65294836/90477121-ccac1e80-e165-11ea-8f97-41a454964b2c.jpg)
 
-![toppage](https://user-images.githubusercontent.com/65294836/90474583-8dc79a00-e160-11ea-9697-b3d2126f8aae.gif)
-
-![user](https://user-images.githubusercontent.com/65294836/90475063-adab8d80-e161-11ea-9668-0fd0e28fab89.jpg)
+![user](https://user-images.githubusercontent.com/65294836/90477241-02e99e00-e166-11ea-8187-6b8f54a345eb.jpg)
