@@ -6,7 +6,7 @@
           %h2 Recipe
         .col-12.content
           .content
-            = @recipe.image
+            = image_tag @recipe.image.url
             .title
               = @recipe.title
             .body
