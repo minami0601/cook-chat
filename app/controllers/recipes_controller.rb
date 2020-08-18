@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.includes(:user).order("created_at DESC")
   end
 
   def show
