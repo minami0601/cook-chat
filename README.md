@@ -35,18 +35,22 @@ Things you may want to cover:
 ## DEMO
 
 * トップページのView
+
 ![cookchat top](https://user-images.githubusercontent.com/65294836/90475500-84d7c800-e162-11ea-9d17-134e27c21295.jpg)
 
 
 * レシピの一覧
+
 ![recipe index](https://user-images.githubusercontent.com/65294836/90477794-fb76c480-e166-11ea-9b5c-2f3574c611d8.jpg)
 
 
 * レシピの詳細
+
 ![recipe_show](https://user-images.githubusercontent.com/65294836/90496787-3be33c00-e181-11ea-9517-9c57512de24d.jpg)
 
 
 * ユーザー一覧
+
 ![user](https://user-images.githubusercontent.com/65294836/90477241-02e99e00-e166-11ea-8187-6b8f54a345eb.jpg)
 
 
