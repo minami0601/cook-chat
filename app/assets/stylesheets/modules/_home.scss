@@ -13,6 +13,20 @@
   }
 }
 
+.Notification {
+  .notice {
+    background-color: #38AEF0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: #F35500;
+    color: #fff;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .home h1 {
     background-color: #fff;

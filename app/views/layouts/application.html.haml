@@ -9,6 +9,7 @@
     = javascript_include_tag 'application'
     = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Permanent+Marker", rel: "stylesheet"
   %body.body
+    = render 'shared/notifications'
     %header.header#header
       .header__logo
         = link_to "/" do
