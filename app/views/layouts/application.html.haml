@@ -26,6 +26,8 @@
           = link_to destroy_user_session_path, method: :delete, class: "header_a" do
             %p.login-left ログアウト
         -else
+          = link_to home_guest_sign_in_path, method: :post, class: "header__a"  do
+            %p.login-left ゲストログイン
           = link_to new_user_session_path, class: "header__a"  do
             %p.login-left ログイン
           = link_to new_user_registration_path, class: "header__a"  do
