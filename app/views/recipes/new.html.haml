@@ -4,16 +4,17 @@
       .col-12
         %h2 New post
       .col-12.content
-        = form_for @recipe do |f|
-          .field
-            = f.label :レシピ名, class: "label"
-            = f.text_field :title, class: "input"
-          .field
-            = f.label :作り方, class: "label"
-            = f.text_area :body, class: "area_body"
-          .field
-            = f.label :料理写真, class: "label"
-            = f.file_field :image, class: "input_image"
+        .content_new
+          = form_for @recipe do |f|
+            .field
+              = f.label :レシピ名, class: "label"
+              = f.text_field :title, class: "input"
+            .field
+              = f.label :作り方, class: "label"
+              = f.text_area :body, class: "area_body"
+            .field
+              = f.label :料理写真, class: "label"
+              = f.file_field :image, class: "input_image"
 
-          = f.submit value: "投稿", class: "submit_box" 
+            = f.submit value: "投稿", class: "submit_box" 
 
