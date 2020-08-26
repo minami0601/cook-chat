@@ -47,6 +47,10 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
+  def search
+    @recipes = Recipe.search(params[:keyword])
+  end
+
   private
   def recipe_params
     params.require(:recipe).permit(:title, :body, :image)

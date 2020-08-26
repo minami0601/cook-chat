@@ -13,4 +13,12 @@ class Recipe < ApplicationRecord
     validates :body
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Recipe.where('title LIKE(?)', "%#{search}%")
+    else
+      Recipe.all
+    end
+  end
 end
