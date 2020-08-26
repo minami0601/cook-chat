@@ -49,6 +49,26 @@
     font-size: 50px;
     font-family: 'Permanent Marker', cursive;
   }
+  .search-form {
+    text-align: center;
+    padding-top: 32px;
+  }
+  
+  .search-form .search-input {
+    width: 30%;
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+  .search-form .search-btn {
+    width: 10%;
+    padding: 10px;
+    background-color: #0DBC6C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+  
   .content {
     height: 430px;
     background-color: #fff;
