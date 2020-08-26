@@ -34,6 +34,9 @@
               %h4 ＜コメント一覧＞
               -if @comments
                 - @comments.each do |comment|
-                  %p
-                    = link_to comment.user.user_name, "/users/#{comment.user_id}"
-                    = comment.text
+                  .comment_box
+                    .comment_box_left
+                      = link_to comment.user.user_name, "/users/#{comment.user_id}", class: "comment_name"
+                      = comment.text
+                    .comment_box_right
+                      = link_to "Delete", recipe_comment_path(@recipe, comment), method: :delete,  class: 'delete_button'

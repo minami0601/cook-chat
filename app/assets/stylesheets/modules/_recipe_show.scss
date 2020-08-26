@@ -93,8 +93,19 @@
   h4 {
     font-size: 18px;
   }
-  .comments a {
+  .comment_box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .comments .comment_name {
     text-decoration: none;
     color: #0066FF;
+  }
+  .delete_button {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 70, 70);
+    margin-right: 30px;
+    font-size: 16px;
   }
 }
