@@ -18,7 +18,7 @@ class Recipe < ApplicationRecord
     if search != ""
       Recipe.where('title LIKE(?)', "%#{search}%")
     else
-      Recipe.all
+      Recipe.includes(:user).order("created_at DESC")
     end
   end
 end

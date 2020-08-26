@@ -12,8 +12,11 @@
       - @recipes.each do |recipe|
         .col-sm-12.col-xl-4.col-md-6
           .content 
-            = link_to recipe_path(recipe), class: "top_img" do
-              = image_tag recipe.image.url
+            .hover_darken
+              = link_to recipe_path(recipe), class: "top_img" do
+                = image_tag recipe.image.url
+              .recipe_name
+                = recipe.title
             .content__bottom
               .content__bottom
                 .content__bottom__recipe-like
