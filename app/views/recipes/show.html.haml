@@ -25,18 +25,18 @@
             .line
             .comment
               -if current_user
-                = form_with model: [@recipe, @comment], local: true do |form|
+                = form_with model: [@recipe, @comment], local: true, id: "new_comment" do |form|
                   = form.text_area :text, placeholder: "コメントする", rows: "2", class: "input"
                   = form.submit "SEND", class: "submit"
               -else
                 %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+            %h4 ＜コメント一覧＞ 
             .comments
-              %h4 ＜コメント一覧＞
               -if @comments
                 - @comments.each do |comment|
                   .comment_box
                     .comment_box_left
                       = link_to comment.user.user_name, "/users/#{comment.user_id}", class: "comment_name"
                       = comment.text
-                    .comment_box_right
-                      = link_to "Delete", recipe_comment_path(@recipe, comment), method: :delete,  class: 'delete_button'
+                    -# .comment_box_right
+                    -#   = link_to "Delete", recipe_comment_path(@recipe, comment), method: :delete,  class: 'delete_button'

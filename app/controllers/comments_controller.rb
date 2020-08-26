@@ -1,8 +1,13 @@
 class CommentsController < ApplicationController
   before_action :correct_user, only: [:destroy]
   def create
-    comment = Comment.create(comment_params)
-    redirect_to "/recipes/#{comment.recipe.id}"
+    # comment = Comment.create(comment_params)
+    # redirect_to "/recipes/#{comment.recipe.id}"
+    @comment = Comment.create(comment_params)
+    respond_to do |format|
+      format.html { redirect_to recipe_path(params[:recipe_id])  }
+      format.json
+    end
   end
 
   def destroy

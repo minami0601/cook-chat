@@ -71,6 +71,7 @@
   }
   .comment {
     text-align: center;
+
   }
   .input {
     width: 90%;
@@ -88,10 +89,12 @@
   }
   .comments {
     margin: 20px;
-
+    height: 200px;
+    overflow: scroll;
   }
   h4 {
     font-size: 18px;
+    margin: 20px 0 0 20px;
   }
   .comment_box {
     display: flex;
@@ -100,6 +103,9 @@
   .comments .comment_name {
     text-decoration: none;
     color: #0066FF;
+  }
+  .comment_box_left {
+    margin: 5px 0;
   }
   .delete_button {
     display: inline-block;
